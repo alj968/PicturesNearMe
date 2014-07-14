@@ -1,0 +1,21 @@
+README file
+Amanda Jones
+
+
+Assumptions Made in Coding Test:
+(If any of these assumptions were incorrect, please let me know and I will make the neccessary adjustments in the project).
+- Created an iPhone 7.1 app (rather than an iPad app)
+- Updating the blue dot specifying current location of the user when the user's location changes
+- Initial zoom level of map view uses 1000 meter longitude, 1000 meter latitude region around user's current location
+- Slider distance from 1 km to 5 km (5 as the max because 5 km is max distance for Instagram's media/search endpoint)
+- Default radius is 1 km
+- Distance of picture from user (displayed under the picture on second screen) is in km
+- When distances are displayed (slider label and under pictures), the value is truncated to two decimal places
+- Drops a pin (annotation) where user touches. Slight delay so user can see the pin to see exactly where he/she touched. If user touches new location upon returning to the screen, the old pin is removed and a new pin is dropped in the new location
+- Images shown from last 5 days (Instagram default for media/search endpoint)
+- For media/search, authentication is not required nor is it mentioned in instructions, so user does not go through authentication and client_id  used in request instead of an access token
+- Without specifying a "count" in the media/search request, only a small amount (around 12) images found. This endpoint does not offer pagination. So, specified count of 100 to get more images
+- On the nearby pictures screen, using thumbnail picture from Instagram picture
+- Used default collection view layout
+- Used default NSCache limit. Tested with small limit (10) and performed as expected with placeholder image showing until image loaded. No delay in scroll or flicking of images while they update
+- Assumed Instagram API works as documented, so this was not tested beyond my own personal smoketesting
